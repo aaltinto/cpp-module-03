@@ -5,13 +5,13 @@
 
 class	ClapTrap
 {
-	private:
-		std::string		_name;
+	protected:
+		std::string 	_name;
 		unsigned int	_hitPoints;
 		unsigned int	_energyPoints;
 		unsigned int	_attackDamage;
     public:
-		ClapTrap(std::string name = "NULL");
+		ClapTrap(std::string name = NULL);
 		ClapTrap(ClapTrap& copy);
 		~ClapTrap();
 		ClapTrap &operator=(ClapTrap const &copy);
