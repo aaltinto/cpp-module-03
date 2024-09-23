@@ -6,5 +6,6 @@ class FragTrap : public ClapTrap {
         FragTrap(FragTrap& copy);
         ~FragTrap();
         void highFivesGuys();
+        FragTrap &operator=(FragTrap& const copy);
     
 };

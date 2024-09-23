@@ -1,4 +1,4 @@
-#include "ScravTrap.hpp"
+#include "ScavTrap.hpp"
 
 void    getStats(ClapTrap& clap)
 {
@@ -10,7 +10,7 @@ void    getStats(ClapTrap& clap)
 int main(void)
 {
     ClapTrap clap("Buddy");
-    ScravTrap scrav("Pedro");
+    ScavTrap scrav("Pedro");
     getStats(scrav);
     getStats(clap);
     for (int i = 0; i < 10; i++)

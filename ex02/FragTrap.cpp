@@ -22,3 +22,11 @@ void FragTrap::highFivesGuys()
 {
     std::cout << "FragTrap " << this->getName() << " is requesting a positive high fives" << std::endl;
 }
+
+FragTrap &FragTrap::operator=(FragTrap& const copy)
+{
+    this->_attackDamage = copy._attackDamage;
+    this->_energyPoints = copy._energyPoints;
+    this->_hitPoints = copy._hitPoints;
+    this->_name = copy._name;
+}
