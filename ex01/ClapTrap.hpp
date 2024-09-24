@@ -11,7 +11,7 @@ class	ClapTrap
 		unsigned int	_energyPoints;
 		unsigned int	_attackDamage;
     public:
-		ClapTrap(std::string name = NULL);
+		ClapTrap(std::string name = "NULL");
 		ClapTrap(ClapTrap& copy);
 		~ClapTrap();
 		ClapTrap &operator=(ClapTrap const &copy);

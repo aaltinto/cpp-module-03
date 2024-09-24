@@ -102,6 +102,8 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << this->getName() << " has no energy left. Can't be repaired" << std::endl;
 		return;
 	}
+	std::cout << "FragTrap " << this->getName() << " repaired " << amount << " points" << std::endl;
 	this->_hitPoints += amount;
 	this->_energyPoints -= 1;
+	std::cout << this->getName() << " has " << this->getHitPoints() << " hit points" << std::endl;
 }

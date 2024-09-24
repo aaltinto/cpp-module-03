@@ -8,8 +8,18 @@ int main(void)
 
     test = trap;
 
+    tryHard.takeDamage(1);
     tryHard.takeDamage(10000);
     tryHard.beRepaired(100);
+    trap.attack("Hose");
+    trap.attack("Hose");
+    trap.attack("Hose");
+    trap.attack("Hose");
+    trap.attack("Hose");
+    trap.attack("Hose");
+    trap.attack("Hose");
+    trap.attack("Hose");
+    trap.attack("Hose");
     trap.attack("Hose");
     test.attack("Ben");
 }

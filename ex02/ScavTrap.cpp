@@ -40,10 +40,45 @@ void ScavTrap::attack(const std::string &target)
 	this->_energyPoints -= 1;
 }
 
-ScavTrap &ScavTrap::operator=(ScavTrap& const copy)
+void	ScavTrap::takeDamage(unsigned int amount)
+{
+	if (this->_hitPoints <= 0)
+	{
+		std::cout << "ScavTrap " << this->getName() << " already dead" << std::endl;
+		return ;
+	}
+	if (this->_hitPoints <= amount)
+		this->_hitPoints = 0;
+	else
+		this->_hitPoints -= amount;
+	std::cout << "ScavTrap " << this->getName() << " has taken " << amount << " points of damage\n"
+			<< this->getName() << " has " << this->getHitPoints() << " hit points left" << std::endl;
+
+}
+
+void	ScavTrap::beRepaired(unsigned int amount)
+{
+	if (this->getHitPoints() <= 0)
+	{
+		std::cout << "ScavTrap " << this->getName() << " is dead. Can't be repaired" << std::endl;
+		return;
+	}
+	if (this->getEnergy() <= 0)
+	{
+		std::cout << "ScavTrap " << this->getName() << " has no energy left. Can't be repaired" << std::endl;
+		return;
+	}
+	std::cout << "ScavTrap " << this->getName() << " repaired " << amount << " points" << std::endl;
+	this->_hitPoints += amount;
+	this->_energyPoints -= 1;
+	std::cout << this->getName() << " has " << this->getHitPoints() << " hit points" << std::endl;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap& copy)
 {
 	this->_attackDamage = copy._attackDamage;
 	this->_energyPoints = copy._energyPoints;
 	this->_hitPoints = copy._hitPoints;
 	this->_name = copy._name;
+	return *this;
 }
